@@ -26,4 +26,5 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - run: npm test
+    - run: pm2 delete all
     - run: npm run scale
