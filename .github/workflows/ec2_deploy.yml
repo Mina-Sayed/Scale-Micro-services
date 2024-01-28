@@ -5,7 +5,7 @@ name: Deploy On EC2 Staging
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
  
 
 jobs:
