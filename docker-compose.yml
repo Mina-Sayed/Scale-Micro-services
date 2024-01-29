@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  customer-ms:
+    build: .
+    env_file:
+      - ./.env
+  
+  nginx:
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+    depends_on:
+      - customer-ms
+    ports:
+      - 8001:8001
